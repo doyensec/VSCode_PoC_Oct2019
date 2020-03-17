@@ -1,11 +1,13 @@
 # VSCode Python Extension Code Execution
 
-This is a PoC of a code execution vulnerability discovered in the Visual Studio Code Python extension.
-TL;DR: vscode may use code from a virtualenv found in the project folders without asking the user, for things such as formatting, autocompletion, etc.
-You can read more about this vulnerability [on Doyensec blog](https://blog.doyensec.com).
+This repository contains the Proof-of-Concept of a code execution vulnerability discovered in the [Visual Studio Code](https://code.visualstudio.com/) Python extension.
 
-## Howto
+>TL;DR: VScode may use code from a virtualenv found in the project folders without asking the user, for things such as formatting, autocompletion, etc. This insecure design leads to arbitrary code execution by simply cloning and opening a malicious Python repository.
 
-- `git clone https://github.com/doyensec/VSCode_codeexec_PoC_Oct2019.git`
-- add the cloned repo to VSCode workspace
-- open `test.py` in VScode
+You can read more about this vulnerability on our blog: [https://blog.doyensec.com/2020/03/16/vscode_codeexec.html](https://blog.doyensec.com/2020/03/16/vscode_codeexec.html).
+
+## HowTo
+
+- Clone the 'malicious' repository with `git clone https://github.com/doyensec/VSCode_PoC_Oct2019.git`
+- Add the cloned repo to a VSCode workspace on macOS. Note that the vulnerability affects all platforms, but the PoC is executing *Calculator.app*
+- Open `test.py` in VScode
