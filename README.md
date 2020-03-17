@@ -1,6 +1,6 @@
 # VSCode Python Extension Code Execution
 
-This is a PoC of a code execution vulnerability discovered in the Python extension bundled by default with Visual Studio Code.
+This is a PoC of a code execution vulnerability discovered in the Visual Studio Code Python extension.
 TL;DR: vscode may use code from a virtualenv found in the project folders without asking the user, for things such as formatting, autocompletion, etc.
 You can read more about this vulnerability [on Doyensec blog](https://blog.doyensec.com).
 
